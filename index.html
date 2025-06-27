@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bybit Customer Support</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+            color: #374151; /* Dark gray text */
+        }
+        .gradient-bg {
+            background-image: linear-gradient(to right, #1a2b4b, #00c7d4); /* Bybit-like gradient */
+        }
+        .btn-primary {
+            @apply bg-gradient-to-r from-blue-500 to-teal-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:from-blue-600 hover:to-teal-600 transition duration-300 ease-in-out;
+        }
+        .input-field {
+            @apply w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500;
+        }
+        /* Spinner styles */
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #ffffff;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <!-- Bybit Logo Placeholder -->
+                <img src="https://placehold.co/40x40/00c7d4/ffffff?text=B" alt="Bybit Logo" class="h-10 w-10 mr-2 rounded-full">
+                <h1 class="text-2xl font-bold text-gray-800">Bybit Support</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium transition duration-200">Contact Us</a>
+                <a href="#ai-assistant" class="text-gray-600 hover:text-blue-600 font-medium transition duration-200">AI Assistant</a>
+                <a href="#faqs" class="text-gray-600 hover:text-blue-600 font-medium transition duration-200">FAQs</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <!-- Phone Number -->
+                <a href="tel:+2348001234567" class="text-gray-600 hover:text-blue-600 font-medium hidden sm:block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block mr-1" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.774a11.037 11.037 0 006.107 6.107l.774-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                    </svg>
+                  
+                </a>
+                <!-- Live Chat Button - Chaport will render its own widget, so this button is no longer strictly needed for functionality but kept for design consistency if preferred. You can remove it if Chaport provides its own floating button. -->
+                <button class="btn-primary" onclick="chaport.q('open');">Live Chat</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+
+        <!-- Hero Section -->
+        <section class="bg-white rounded-lg shadow-lg p-8 mb-12 text-center gradient-bg text-white">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">How Can We Help You Today?</h2>
+            <p class="text-lg mb-6">Find answers to common questions or reach out to our dedicated support team.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#contact" class="btn-primary">Contact Us</a>
+                <!-- Live Chat Button in Hero - removed for Chaport, as Chaport often provides its own entry point -->
+                <!-- If you want a button to explicitly open Chaport, you can add one here with onclick="chaport.q('open');" -->
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h3 class="text-3xl font-bold text-gray-800 mb-6 text-center">Contact Our Support Team</h3>
+            <p class="text-center text-gray-600 mb-8">Can't find what you're looking for? Fill out the form below and we'll get back to you as soon as possible.</p>
+
+            <form action="https://formsubmit.co/el/vevoci" method="POST" class="max-w-xl mx-auto space-y-6">
+                <!-- IMPORTANT: Replace {your_email_address} with your actual email address -->
+
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://example.com/thanks.html">
+                <input type="hidden" name="_subject" value="New Support Request from Bybit Mockup Site">
+
+                <div>
+                    <label for="name" class="block text-gray-700 text-sm font-medium mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" class="input-field" placeholder="John Doe" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-700 text-sm font-medium mb-2">Your Email</label>
+                    <input type="email" id="email" name="email" class="input-field" placeholder="your.email@example.com" required>
+                </div>
+                <!-- Phone Number Field -->
+                <div>
+                    <label for="phone" class="block text-gray-700 text-sm font-medium mb-2">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone_number" class="input-field" placeholder="+234 812 345 6789">
+                </div>
+                <div>
+                    <label for="subject" class="block text-gray-700 text-sm font-medium mb-2">Subject</label>
+                    <input type="text" id="subject" name="subject" class="input-field" placeholder="Inquiry about account verification" required>
+                </div>
+                <div>
+                    <label for="message" class="block text-gray-700 text-sm font-medium mb-2">Your Message</label>
+                    <textarea id="message" name="message" rows="5" class="input-field" placeholder="Describe your issue or question in detail..." required></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="btn-primary w-full">Send Message</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- AI Assistant Section -->
+        <section id="ai-assistant" class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h3 class="text-3xl font-bold text-gray-800 mb-6 text-center">AI Assistant for Instant Answers ✨</h3>
+            <p class="text-center text-gray-600 mb-8">Ask our AI Assistant any question about Bybit or cryptocurrency in general for quick responses.</p>
+
+            <div class="max-w-xl mx-auto space-y-4">
+                <div>
+                    <label for="aiQuestion" class="block text-gray-700 text-sm font-medium mb-2">Your Question</label>
+                    <textarea id="aiQuestion" class="input-field" rows="3" placeholder="e.g., How to deposit USDT? What is futures trading?"></textarea>
+                </div>
+                <div>
+                    <button id="getAnswerBtn" class="btn-primary w-full flex items-center justify-center">
+                        <span id="buttonText">Get Answer ✨</span>
+                        <div id="loadingSpinner" class="spinner ml-2 hidden"></div>
+                    </button>
+                </div>
+                <div id="aiAnswer" class="bg-blue-50 border border-blue-200 rounded-md p-4 text-gray-800 hidden">
+                    <h4 class="font-semibold mb-2">AI Answer:</h4>
+                    <p id="answerContent"></p>
+                </div>
+                <div id="errorMessage" class="bg-red-50 border border-red-200 rounded-md p-4 text-red-700 hidden">
+                    <p>An error occurred. Please try again later.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs Section -->
+        <section id="faqs" class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h3 class="text-3xl font-bold text-gray-800 mb-6 text-center">Frequently Asked Questions</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- FAQ Item 1 -->
+                <div>
+                    <h4 class="text-xl font-semibold text-gray-700 mb-2">How do I verify my Bybit account?</h4>
+                    <p class="text-gray-600">To verify your Bybit account, go to 'Account & Security' -> 'Identity Verification'. You'll need to upload a valid ID document and complete facial recognition. This typically takes a few minutes.</p>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div>
+                    <h4 class="text-xl font-semibold text-gray-700 mb-2">What payment methods are supported for deposits?</h4>
+                    <p class="text-gray-600">Bybit supports P2P trading with various local bank transfers. You can also use One-Click Buy with bank transfers or certain credit/debit cards (subject to issuer restrictions).</p>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div>
+                    <h4 class="text-xl font-semibold text-gray-700 mb-2">How long do withdrawals take?</h4>
+                    <p class="text-gray-600">Crypto withdrawals are processed quickly, usually within 30 minutes to an hour. Fiat (local currency) withdrawals via P2P depend on the merchant and bank, but are generally fast.</p>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div>
+                    <h4 class="text-xl font-semibold text-gray-700 mb-2">I forgot my password, what should I do?</h4>
+                    <p class="text-gray-600">Click on 'Forgot Password' on the login page. You'll be prompted to enter your registered email or phone number to reset it. Follow the instructions sent to you.</p>
+                </div>
+                <!-- Add more FAQs here -->
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Bybit. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chaport Live Chat code -->
+    <script type="text/javascript">
+    (function(w,d,v3){
+    w.chaportConfig = {
+    appId : '685ddc3d609618feee5d43ce'
+    };
+
+    if(w.chaport)return;v3=w.chaport={};v3._q=[];v3._l={};v3.q=function(){v3._q.push(arguments)};v3.on=function(e,fn){if(!v3._l[e])v3._l[e]=[];v3._l[e].push(fn)};var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://app.chaport.com/javascripts/insert.js';var ss=d.getElementsByTagName('script')[0];ss.parentNode.insertBefore(s,ss)})(window, document);
+    </script>
+    <!-- End of Chaport Live Chat code -->
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // AI Assistant Logic
+        const getAnswerBtn = document.getElementById('getAnswerBtn');
+        const aiQuestion = document.getElementById('aiQuestion');
+        const aiAnswer = document.getElementById('aiAnswer');
+        const answerContent = document.getElementById('answerContent');
+        const loadingSpinner = document.getElementById('loadingSpinner');
+        const buttonText = document.getElementById('buttonText');
+        const errorMessage = document.getElementById('errorMessage');
+
+        getAnswerBtn.addEventListener('click', async () => {
+            const prompt = aiQuestion.value.trim();
+            if (!prompt) {
+                aiAnswer.classList.add('hidden');
+                errorMessage.classList.remove('hidden');
+                errorMessage.querySelector('p').textContent = "Please enter a question to get an answer.";
+                return;
+            }
+
+            // Show loading state
+            buttonText.classList.add('hidden');
+            loadingSpinner.classList.remove('hidden');
+            getAnswerBtn.disabled = true;
+            aiAnswer.classList.add('hidden'); // Hide previous answer
+            errorMessage.classList.add('hidden'); // Hide previous error
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: `Answer the following Bybit or general cryptocurrency related question concisely: ${prompt}` }] });
+
+                const payload = { contents: chatHistory };
+                const apiKey = ""; // Canvas will provide this at runtime for gemini-2.0-flash
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    answerContent.textContent = text;
+                    aiAnswer.classList.remove('hidden');
+                } else {
+                    console.error('Gemini API returned an unexpected response structure:', result);
+                    errorMessage.querySelector('p').textContent = "Could not get a clear answer. Please try rephrasing your question.";
+                    errorMessage.classList.remove('hidden');
+                }
+            } catch (error) {
+                console.error('Error calling Gemini API:', error);
+                errorMessage.querySelector('p').textContent = "Failed to connect to the AI Assistant. Please check your internet connection and try again.";
+                errorMessage.classList.remove('hidden');
+            } finally {
+                // Hide loading state
+                buttonText.classList.remove('hidden');
+                loadingSpinner.classList.add('hidden');
+                getAnswerBtn.disabled = false;
+            }
+        });
+
+        // Form submission success message (client-side simulation)
+        const contactForm = document.querySelector('#contact form');
+        contactForm.addEventListener('submit', function(event) {
+            // FormSubmit.co handles the actual email and redirect.
+            // This script is mostly for showing how a client-side message *could* be implemented.
+        });
+
+    </script>
+</body>
+</html>
